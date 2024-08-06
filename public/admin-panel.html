@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Panel | FNATICDLE</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicons/flavicon.png">
+    <link rel="stylesheet" href="./styles/admin-panel.css">
+</head>
+
+<body>
+
+    <div class="container-body">
+
+        <header class="header">
+            <h1>Admin Panel</h1>
+        </header>
+
+        <main class="main">
+
+            <div class="add-area">
+                <div class="add-message"></div>
+                <table class="add-table">
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Nationnality</th>
+                            <th>Role</th>
+                            <th>Age</th>
+                            <th>Arrived</th>
+                            <th>Current</th>
+                            <th>Player</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <form onsubmit="submit_add(event)">
+                            <tr>
+                                <td><input type="text" id="add-game" required></td>
+                                <td><input type="text" id="add-nationnality" required></td>
+                                <td><input type="text" id="add-role" required></td>
+                                <td><input type="number" id="add-age" min="0" required></td>
+                                <td><input type="number" id="add-arrived" min="0" required></td>
+                                <td><input type="text" id="add-current" required></td>
+                                <td><input type="text" id="add-player" required></td>
+                            </tr>
+                            <button id="submit-btn-add" type="submit">Add</button>
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+
+            <hr>
+
+            <div class="edit-area">
+                <div class="edit-message"></div>
+                <select class="edit-select" id="edit-select">
+                    <option value="">--- SELECT A PLAYER ---</option>
+                </select>
+                <table class="edit-table">
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <th>Nationnality</th>
+                            <th>Role</th>
+                            <th>Age</th>
+                            <th>Arrived</th>
+                            <th>Current</th>
+                            <th>Player</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="current-player-data"></tr>
+                        <form onsubmit="submit_edit(event)">
+                            <tr>
+                                <td><input type="text" id="edit-game" required></td>
+                                <td><input type="text" id="edit-nationnality" required></td>
+                                <td><input type="text" id="edit-role" required></td>
+                                <td><input type="number" id="edit-age" min="0" required></td>
+                                <td><input type="number" id="edit-arrived" min="0" required></td>
+                                <td><input type="text" id="edit-current" required></td>
+                                <td><input type="text" id="edit-player" required></td>
+                            </tr>
+                            <button id="submit-btn-edit" type="submit">Edit</button>
+                        </form>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="./scripts/admin-panel .js"></script>
+
+</body>
+</html>

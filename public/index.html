@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DLE game based on fnatic members">
+    <meta name="keywords" content="fnatic, dle, game, fnaticdle">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="TAKOS">
+    <meta property="og:title" content="FNATICDLE">
+    <meta property="og:description" content="DLE game based on fnatic members">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/fr/f/f4/Fnatic-Logo-2020.svg">
+    <meta property="og:url" content="https://fnaticdle.com">
+    <title>FNATICDLE</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicons/flavicon.png">
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+
+    <div class="container-body">
+
+        <header>
+            <img src="./assets/images/Fnatic.png" alt="Fnatic Logo" class="header-logo">
+            <h1><a href="https://www.fnatic.com" target="_blank" class="header-title">FNATICDLE</a></h1>
+        </header>
+
+        <main>
+            <div class="input-area">
+                <input type="text" id="input-submit" placeholder="Enter the name of a member who has been/is at fnatic">
+                <div id="submit-btn">Guess</div>
+                <div class="filtered-player-list"></div>
+            </div>
+            <div class="victory-area"></div>
+            <div class="error-message" style="color: red;"></div>
+            <table class="table-answer">
+                <thead id="thead"></thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </main>
+
+        <footer>
+            <div>Made by <a href="https://github.com/TAKOS-34" target="_blank" id="social-link">TAKOS</a> | <a href="mailto:contact@fnaticdle.com" id="contact">Contact me</a> | Not affilied with FNATIC</div>
+        </footer>
+
+    </div>
+
+    <script src="./scripts/index.js"></script>
+
+</body>
+</html>
