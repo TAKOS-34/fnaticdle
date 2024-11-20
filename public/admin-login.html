@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Admin Login | FNATICDLE</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicons/flavicon.png">
+    <link rel="stylesheet" href="./styles/admin-login.css">
+</head>
+
+<body>
+
+    <div class="container-body">
+
+        <header class="header">
+            <h1>Admin Panel | Login</h1>
+        </header>
+
+        <main class="main">
+            <div class="error-message" style="display: none; color:red;">Wrong login or password</div>
+            <form class="form" onsubmit="connexion(event)">
+                <input type="text" id="username" placeholder="Username" minlength="1" maxlength="64" required>
+                <input type="password" id="password" placeholder="Password" minlength="1" maxlength="64" required>
+                <button type="submit">Connexion</button>
+            </form>
+        </main>
+
+    </div>
+
+    <script src="./scripts/admin-login.js"></script>
+
+</body>
+</html>

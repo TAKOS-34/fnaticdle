@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html body {
+    background-color: black;
+    font-family: sans-serif;
+    color: white;
+}
+
+.container-body {
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-body .header {
+    height: 9vh;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.container-body .main hr {
+    width: 75vw;
+    margin: auto;
+}
+
+.container-body .main button {
+    height: 40px;
+    width: 50px;
+    font-size: 1.5rem;
+}
+
+.container-body .main th, td {
+    font-size: 1.5rem;
+    border: 1px solid white;
+    text-align: center;
+    padding: 5px 10px 5px 10px;
+}
+
+.container-body .main input {
+    font-size: 1.5rem;
+    border: 1px solid white;
+    text-align: center;
+    width: 200px;
+}
+
+.container-body .main button {
+    font-size: 2rem;
+    border: 1px solid white;
+    text-align: center;
+    width: 180px;
+}
+
+.container-body .main .add-area {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-body .main .add-area > * {
+    margin: 10px;
+}
+
+.container-body .main .edit-area {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-body .main .edit-area > * {
+    margin: 10px;
+}
+
+.container-body .main .edit-area .edit-select {
+    height: 30px;
+    width: 300px;
+    text-align: center;
+    font-size: 1.5rem;
+}
