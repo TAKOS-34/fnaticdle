@@ -4,4 +4,4 @@ FnaticDLE is an engaging trivia game, designed specifically for the members and 
 
 ## Website
 
-Visit the game here: <a href="https://fnaticdle.com" target="_blank">fnaticdle.com</a>
+Visit the game here: [fnaticdle.com](https://fnaticdle.com)
