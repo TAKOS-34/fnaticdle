@@ -1,0 +1,591 @@
+/* ESSENTIAL */
+
+@font-face {
+    font-family: "fnatic-font";
+    src: url(../assets/fonts/hyundai_normal.TTF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    background-color: black;
+}
+
+/* CSS */
+
+.container-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+header {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.header-title {
+    font-family: "fnatic-font";
+    font-size: 5rem;
+    text-decoration: none;
+    letter-spacing: 10px;
+    color: white;
+    transition: 1s;
+}
+
+.header-title:hover {
+    cursor: pointer;
+    color: #FF5800;
+}
+
+.header-logo {
+    width: 150px;
+    margin-right: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 100px 0;
+    flex: 1;
+}
+
+main .input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+main .fade-out-animation {
+    animation: zoom_out_animation 0.5s forwards; 
+}
+
+main #input-submit {
+    border-radius: 20px;
+    height: 50px;
+    width: 600px;
+    text-align: center;
+    font-size: 20px;
+}
+
+main #submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 80px;
+    border-radius: 20px;
+    background-color: #FF5800;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+main #submit-btn:hover {
+    background-color: #e95100;
+    box-shadow: inset 0 0 2px black;
+}
+
+main .filtered-player-list {
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    max-height: 460px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #FF5800 white;
+}
+
+main .filtered-player {
+    color: white;
+    display: flex;
+    height: 60px;
+    width: 400px;
+    background-color: #FF5800;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px black;
+    transition: 0.25s;
+}
+
+main .filtered-player-image {
+    max-height: 90%;
+    margin-right: 10px;
+}
+
+main .filtered-player:hover {
+    background-color: #d64b00;
+    font-size: 2.25rem;
+}
+
+main .victory-square {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.20rem;
+    min-height: 250px;
+    width: 500px;
+    padding: 10px;
+    background-color: #FF5800;
+    border: 2px solid #a53a00;
+    border-radius: 30px;
+    box-shadow: inset 0 0 5px black;
+    color: white;
+    animation: zoom_in_animation 1s forwards;
+    transition: 1s;
+}
+
+main .victory-square img {
+    height: 25px;
+    width: 25px;
+    transition: 1s;
+}
+
+main .victory-square img:hover {
+    transform: scale(1.15);
+}
+
+main .victory-square div {
+    animation: zoom_in_animation 1.5s forwards;
+}
+
+main .victory-square:hover {
+    background-color: #ee5300;
+    box-shadow: inset 0 0 10px black;
+}
+
+main .victory-area {
+    transition: 1s;
+}
+
+main .victory-area:hover {
+    transform: scale(1.05);
+}
+
+main .error-message {
+    color: red;
+    font-size: 1.5rem;
+}
+
+main table {
+    margin-top: 15px;
+    border-spacing: 7px;
+}
+
+main th {
+    background-color: #FF5800;
+    color: white;
+    font-size: 1rem;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px black;
+}
+
+main td {
+    color: white;
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 3px black;
+    animation-name: td_animation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+main .true-guess {
+    background-color: rgb(44, 124, 44);
+}
+
+main .false-guess {
+    background-color: rgb(160, 49, 49);
+}
+
+main td:hover {
+    box-shadow: inset 0 0 10px black;
+}
+
+main td div {
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0px 0px 8px black;
+    text-decoration: solid;
+    position: relative;
+    z-index: 1;
+}
+
+main td img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 75%;
+    max-width: 75%;
+}
+
+main td .arrow {
+    min-height: 80%;
+    min-width: 80%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+main td .player-picture {
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid white;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+footer .footer-li {
+    display: flex;
+    list-style: none;
+}
+
+footer #social-link, #contact {
+    color: white;
+    text-decoration: none;
+    transition: 1s;
+}
+
+footer #social-link:hover, #contact:hover {
+    color: #FF5800;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 855px) {
+
+    header {
+        height: 120px;
+    }
+
+    .header-logo {
+        width: 120px;
+    }
+
+    .header-title {
+        font-size: 4rem;
+    }
+
+    main #input-submit {
+        width: 500px;
+    }
+
+    main th {
+        font-size: 0.8rem;
+        width: 80px;
+    }
+
+    main td {
+        height: 80px;
+        width: 80px;
+    }
+
+    main td div {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 1rem;
+        height: 30px;
+    }
+
+}
+
+@media screen and (max-width: 720px) {
+
+    header {
+        height: 100px;
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .header-title {
+        font-size: 3rem;
+        letter-spacing: 5px;
+    }
+
+    main {
+        margin: 40px 0 80px 0;
+    }
+
+    main #input-submit {
+        width: 400px;
+        font-size: 1rem;
+    }
+
+    main #submit-btn {
+        font-size: 1rem;
+        width: 60px;
+        height: 50px;
+    }
+
+    main .victory-square {
+        font-size: 1rem;
+        min-height: 150px;
+        width: 400px;
+    }
+
+    main .victory-square img {
+        height: 20px;
+        width: 20px;
+    }
+
+    main .filtered-player-list {
+        max-height: 520px;
+    }
+
+    main .filtered-player {
+        width: 300px;
+        font-size: 1.5rem;
+    }
+
+    main .filtered-player:hover {
+        font-size: 2rem;
+    }
+
+    main th {
+        font-size: 0.6rem;
+        width: 60px;
+        height: 30px;
+    }
+
+    main td {
+        height: 60px;
+        width: 60px;
+    }
+
+    main td div {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    header {
+        height: 80px;
+    }
+
+    .header-logo {
+        width: 80px;
+    }
+
+    main {
+        margin: 30px 0 60px 0;
+    }
+
+    .header-title {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+
+    main #input-submit {
+        width: 300px;
+        height: 40px;
+        font-size: 0.7rem;
+        border-radius: 15px;
+    }
+
+    main #submit-btn {
+        font-size: 0.8rem;
+        width: 50px;
+        height: 40px;
+        border-radius: 15px;
+    }
+
+    main .victory-square {
+        font-size: 0.8rem;
+        min-height: 120px;
+        width: 320px;
+    }
+
+    main .filtered-player-list {
+        max-height: 550px;
+    }
+
+    main .filtered-player {
+        height: 50px;
+        width: 200px;
+        font-size: 1rem;
+    }
+
+    main .filtered-player:hover {
+        font-size: 1.25rem;
+    }
+
+    main th {
+        font-size: 0.5rem;
+        height: 20px;
+        width: 50px;
+        box-shadow: inset 0 0 3px black;
+        border-radius: 7px;
+    }
+
+    main td {
+        height: 50px;
+        width: 50px;
+        box-shadow: inset 0 0 3px black;
+    }
+
+    main td div {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-height: 755px) {
+
+    main .filtered-player-list {
+        max-height: 390px;
+    }
+
+}
+
+@media screen and (max-height: 690px) {
+
+    main .filtered-player-list {
+        max-height: 330px;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+
+    main {
+        margin: 25px 0 50px 0;
+    }
+
+    .header-logo {
+        width: 65px;
+    }
+
+    main #input-submit {
+        width: 250px;
+        font-size: 0.5rem;
+    }
+
+    main #submit-btn {
+        font-size: 0.7rem;
+        width: 50px;
+        height: 40px;
+    }
+
+    main .victory-square {
+        font-size: 0.7rem;
+        min-height: 90px;
+        width: 290px;
+    }
+
+    main .victory-square img {
+        height: 15px;
+        width: 15px;
+    }
+
+    main th {
+        font-size: 0.4rem;
+        height: 15px;
+        width: 40px;
+    }
+
+    main td {
+        height: 40px;
+        width: 40px;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+        height: 20px;
+    }
+
+}
+
+/* ANIMATION */
+
+@keyframes td_animation {
+    from {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom_in_animation {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes zoom_out_animation {
+    from { transform: scale(1); }
+    to { transform: scale(0); }
+}
+
+main td:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+main td:nth-child(2) {
+    animation-delay: 300ms;
+}
+
+main td:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+main td:nth-child(4) {
+    animation-delay: 900ms;
+}
+
+main td:nth-child(5) {
+    animation-delay: 1200ms;
+}
+
+main td:nth-child(6) {
+    animation-delay: 1500ms;
+}
+
+main td:nth-child(7) {
+    animation-delay: 1800ms;
+}
