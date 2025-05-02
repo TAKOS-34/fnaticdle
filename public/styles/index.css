@@ -276,17 +276,26 @@ footer .footer-li {
     list-style: none;
 }
 
-footer #social-link, #contact {
+footer .social-link, #contact {
     color: white;
     text-decoration: none;
     transition: 1s;
 }
 
-footer #social-link:hover, #contact:hover {
+footer .social-link:hover, #contact:hover {
     color: #FF5800;
 }
 
 /* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+
+    footer {
+        font-size: 0.8rem;
+        height: 30px;
+    }
+
+}
 
 @media screen and (max-width: 855px) {
 
@@ -318,11 +327,6 @@ footer #social-link:hover, #contact:hover {
 
     main td div {
         font-size: 1.5rem;
-    }
-
-    footer {
-        font-size: 1rem;
-        height: 30px;
     }
 
 }
@@ -394,6 +398,14 @@ footer #social-link:hover, #contact:hover {
 
     main td div {
         font-size: 1.25rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    footer {
+        font-size: 0.65rem;
     }
 
 }
@@ -487,6 +499,14 @@ footer #social-link:hover, #contact:hover {
 
 }
 
+@media screen and (max-width: 500px) {
+
+    footer {
+        font-size: 0.6rem;
+    }
+
+}
+
 @media screen and (max-width: 450px) {
 
     main {
@@ -532,8 +552,7 @@ footer #social-link:hover, #contact:hover {
     }
 
     footer {
-        font-size: 0.75rem;
-        height: 20px;
+        font-size: 0.45rem;
     }
 
 }
